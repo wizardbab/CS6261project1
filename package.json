@@ -10,5 +10,8 @@
     "test": "mocha"
   },
   "author": "En Yang Pang",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^6.1.4"
+  }
 }
