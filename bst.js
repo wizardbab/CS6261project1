@@ -15,7 +15,6 @@ function show() {
 function BST() {
   this.root = null;
   this.insert = insert;
-  this.inOrder = inOrder;
 }
 
 function insert(data) {
