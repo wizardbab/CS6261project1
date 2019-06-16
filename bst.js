@@ -26,8 +26,8 @@ function insert(data) {
     var current = this.root;
     var parent;
     while (true) {
-      parent = culrrent;
-      if (data < current.data) {
+      parent = current;
+      if (data.size < current.data.size) {
         current = current.left;
         if (current == null) {
           parent.left = n;
