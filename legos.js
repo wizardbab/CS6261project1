@@ -20,6 +20,7 @@ function LegoPile() {
   };
   this.insert = insert;
   this.hasBrick = hasBrick;
+  this.count = count;
 }
 
 function insert(brick) {
@@ -51,4 +52,12 @@ function hasBrick(size, color) {
   } else {
     return false;
   }
+}
+
+function count() {
+  var count = 0;
+  for (var key in this.dictionary) {
+    count += this.dictionary[key].count();
+  }
+  return count;
 }

@@ -15,6 +15,7 @@ function show() {
 function BST() {
   this.root = null;
   this.insert = insert;
+  this.count = count;
 }
 
 function insert(data) {
@@ -43,3 +44,22 @@ function insert(data) {
   }
 }
 
+function count() {
+  this.countSubtree = countSubtree;
+  if (this.root == null) {
+    return 0;
+  }
+  return this.countSubtree(this.root);
+}
+
+function countSubtree(currentNode) {
+  var count = 0;
+  if (currentNode.left != null) {
+    count += this.countSubtree(currentNode.left);
+  }
+  if (currentNode.right != null) {
+    count += this.countSubtree(currentNode.right);
+  }
+  count++;
+  return count;
+}
